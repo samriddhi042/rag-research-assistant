@@ -1,0 +1,118 @@
+[
+  {
+    "question": "In Attention Is All You Need, which two types of network operations does the Transformer dispense with entirely?",
+    "source": "attention_2017.pdf",
+    "keywords": ["recurrence", "convolution"]
+  },
+  {
+    "question": "In Attention Is All You Need, which task besides machine translation shows that the Transformer generalizes well?",
+    "source": "attention_2017.pdf",
+    "keywords": ["parsing"]
+  },
+  {
+    "question": "What hypothesis about weight updates during model adaptation motivates the LoRA approach?",
+    "source": "lora_2021.pdf",
+    "keywords": ["rank"]
+  },
+  {
+    "question": "What happens to the pre-trained weights during training in the LoRA approach?",
+    "source": "lora_2021.pdf",
+    "keywords": ["freez|frozen"]
+  },
+  {
+    "question": "What type of encoder framework does Dense Passage Retrieval use to represent questions and passages?",
+    "source": "dpr_2020.pdf",
+    "keywords": ["dense|dual"]
+  },
+  {
+    "question": "How does Dense Passage Retrieval measure the similarity between a question and a passage?",
+    "source": "dpr_2020.pdf",
+    "keywords": ["dot product|inner product"]
+  },
+  {
+    "question": "What does BERT stand for in the paper BERT: Pre-training of Deep Bidirectional Transformers?",
+    "source": "bert_2018.pdf",
+    "keywords": ["bidirectional encoder"]
+  },
+  {
+    "question": "How does BERT learn deep bidirectional representations from unlabeled text?",
+    "source": "bert_2018.pdf",
+    "keywords": ["left and right|both left"]
+  },
+  {
+    "question": "In the original RAG paper, what type of model is used as the parametric memory?",
+    "source": "rag_2020.pdf",
+    "keywords": ["seq2seq"]
+  },
+  {
+    "question": "In the original RAG paper, what is used as the non-parametric memory?",
+    "source": "rag_2020.pdf",
+    "keywords": ["wikipedia"]
+  },
+  {
+    "question": "What network structures does Sentence-BERT use to produce semantically meaningful sentence embeddings?",
+    "source": "sbert_2019.pdf",
+    "keywords": ["siamese", "triplet"]
+  },
+  {
+    "question": "Which similarity measure does Sentence-BERT use to compare sentence embeddings?",
+    "source": "sbert_2019.pdf",
+    "keywords": ["cosine"]
+  },
+  {
+    "question": "Which two tasks does the Lost in the Middle paper use to study how language models use long contexts?",
+    "source": "lost_in_middle_2023.pdf",
+    "keywords": ["multi-document|multidocument|multi document", "key-value|keyvalue|key value"]
+  },
+  {
+    "question": "According to the Lost in the Middle paper, where does relevant information need to appear for models to perform best?",
+    "source": "lost_in_middle_2023.pdf",
+    "keywords": ["beginning"]
+  },
+  {
+    "question": "What is the full name of the framework introduced in the Self-RAG paper?",
+    "source": "self_rag_2023.pdf",
+    "keywords": ["reflective"]
+  },
+  {
+    "question": "What special tokens does Self-RAG use to evaluate retrieved passages and its own generations?",
+    "source": "self_rag_2023.pdf",
+    "keywords": ["reflection"]
+  },
+  {
+    "question": "In the chain-of-thought prompting paper, what do large language models generate to solve complex reasoning tasks?",
+    "source": "cot_2022.pdf",
+    "keywords": ["intermediate"]
+  },
+  {
+    "question": "On which kinds of tasks does chain-of-thought prompting improve performance?",
+    "source": "cot_2022.pdf",
+    "keywords": ["arithmetic", "commonsense"]
+  },
+  {
+    "question": "What two capabilities does the ReAct framework combine in large language models?",
+    "source": "react_2022.pdf",
+    "keywords": ["trace", "action"]
+  },
+  {
+    "question": "Which external information source does ReAct interact with to answer questions and verify facts?",
+    "source": "react_2022.pdf",
+    "keywords": ["wikipedia"]
+  },
+  {
+    "question": "Who won the cricket world cup?",
+    "refuse": true
+  },
+  {
+    "question": "What is a good recipe for biryani?",
+    "refuse": true
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "refuse": true
+  },
+  {
+    "question": "Who invented the telephone?",
+    "refuse": true
+  }
+]

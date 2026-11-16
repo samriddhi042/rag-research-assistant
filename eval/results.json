@@ -1,0 +1,166 @@
+[
+  {
+    "question": "In Attention Is All You Need, which two types of network operations does the Transformer dispense with entirely?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Based on the provided documents, the Transformer dispenses with sequence-aligned RNNs (or recurrence) and convolution [attention_2017.pdf, p.2]."
+  },
+  {
+    "question": "In Attention Is All You Need, which task besides machine translation shows that the Transformer generalizes well?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Based on the provided documents, the Transformer generalizes well to **English constituency parsing** [attention_2017.pdf, p.1, p.10]."
+  },
+  {
+    "question": "What hypothesis about weight updates during model adaptation motivates the LoRA approach?",
+    "type": "answer",
+    "retrieval_hit": false,
+    "ok": true,
+    "answer": "The hypothesis motivating the LoRA approach is that the updates to the weights (or the change in weights) during model adaptation have a low \"intrinsic rank\" [LoRA_2021.pdf, p.2, p.4]."
+  },
+  {
+    "question": "What happens to the pre-trained weights during training in the LoRA approach?",
+    "type": "answer",
+    "retrieval_hit": false,
+    "ok": true,
+    "answer": "During training in the LoRA approach, the pre-trained weights are kept frozen [LoRA_2021.pdf, p.2]."
+  },
+  {
+    "question": "What type of encoder framework does Dense Passage Retrieval use to represent questions and passages?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Dense Passage Retrieval uses a dual-encoder framework [dpr_2020.pdf, p.1]."
+  },
+  {
+    "question": "How does Dense Passage Retrieval measure the similarity between a question and a passage?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Dense Passage Retrieval measures the similarity between a question and a passage using the dot product (or inner product) of their d-dimensional vectors: \n\n$$\\text{sim}(q, p) = E_Q(q)^\\top E_P(p)$$\n\nwhere $E_Q(q)$ is the vector representation of the question and $E_P(p)$ is the vector representation of the passage [dpr_2020.pdf, p.3]."
+  },
+  {
+    "question": "What does BERT stand for in the paper BERT: Pre-training of Deep Bidirectional Transformers?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "BERT stands for Bidirectional Encoder Representations from Transformers [bert_2018.pdf, p.1]."
+  },
+  {
+    "question": "How does BERT learn deep bidirectional representations from unlabeled text?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "BERT learns deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers [bert_2018.pdf, p.1]. It achieves this using a \"masked language model\" (MLM) pre-training objective (inspired by the Cloze task), which randomly masks some of the input tokens so the model can predict the original vocabulary ID of the masked word based only on its context [bert_2018.pdf, p.1]. This MLM objective enables the representation to fuse the left and right context to pre-train a deep bidirectional Transformer [bert_2018.pdf, p.2]."
+  },
+  {
+    "question": "In the original RAG paper, what type of model is used as the parametric memory?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Based on the provided documents, the parametric memory is a pre-trained sequence-to-sequence (seq2seq) transformer (specifically BART) [rag_2020.pdf, p.1, p.2]."
+  },
+  {
+    "question": "In the original RAG paper, what is used as the non-parametric memory?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Based on the provided documents, the non-parametric memory in RAG models is a dense vector index of Wikipedia, accessed using a pre-trained neural retriever [rag_2020.pdf, p.1, p.2]."
+  },
+  {
+    "question": "What network structures does Sentence-BERT use to produce semantically meaningful sentence embeddings?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Sentence-BERT uses siamese and triplet network structures to produce semantically meaningful sentence embeddings [sbert_2019.pdf, p.1]."
+  },
+  {
+    "question": "Which similarity measure does Sentence-BERT use to compare sentence embeddings?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Sentence-BERT can use similarity measures like cosine-similarity or Manhattan / Euclidean distance to compare sentence embeddings, with cosine-similarity being used to compare semantically meaningful sentence embeddings [sbert_2019.pdf, p.1, p.3]."
+  },
+  {
+    "question": "Which two tasks does the Lost in the Middle paper use to study how language models use long contexts?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Based on the documents, the paper analyzes language model performance on two tasks:\n1. Multi-document question answering [lost_in_middle_2023.pdf, p.1]\n2. Key-value retrieval [lost_in_middle_2023.pdf, p.1]"
+  },
+  {
+    "question": "According to the Lost in the Middle paper, where does relevant information need to appear for models to perform best?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "According to the paper, models perform best when relevant information appears at the very beginning (primacy bias) or at the end (recency bias) of their input context [lost_in_middle_2023.pdf, p.1, p.2, p.5]."
+  },
+  {
+    "question": "What is the full name of the framework introduced in the Self-RAG paper?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "The full name of the framework introduced in the paper is Self-Reflective Retrieval-Augmented Generation (SELF-RAG) [self_rag_2023.pdf, p.3]."
+  },
+  {
+    "question": "What special tokens does Self-RAG use to evaluate retrieved passages and its own generations?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Based on the provided documents, Self-RAG uses special tokens called **reflection tokens**, which are categorized into:\n\n* **Retrieval tokens:** Used to indicate whether retrieval of passages is necessary [self_rag_2023.pdf, p.1, p.4].\n* **Critique tokens:** Used to evaluate the relevance of retrieved passages, whether the generated text is supported by the passage, and the overall utility of the response (specific critique/reflection tokens mentioned include `ISREL` and `ISSUP`) [self_rag_2023.pdf, p.1, p.4, p.10]."
+  },
+  {
+    "question": "In the chain-of-thought prompting paper, what do large language models generate to solve complex reasoning tasks?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Large language models generate a \"chain of thought,\" which is a series (or coherent series) of intermediate reasoning steps [cot_2022.pdf, p.1, p.2]."
+  },
+  {
+    "question": "On which kinds of tasks does chain-of-thought prompting improve performance?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "Based on the provided documents, chain-of-thought prompting improves performance on:\n\n* **Multi-step reasoning tasks**, specifically arithmetic, commonsense, and symbolic reasoning tasks [cot_2022.pdf, p.8, p.19].\n* A broad range of tasks without requiring any finetuning [cot_2022.pdf, p.25].\n\nIn principle, chain-of-thought prompting is applicable to any text-to-text task or any task for which humans use a \"chain of thought\" to solve [cot_2022.pdf, p.18, p.19]."
+  },
+  {
+    "question": "What two capabilities does the ReAct framework combine in large language models?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "The ReAct framework combines **reasoning** and **acting** (generating verbal reasoning traces and task-specific actions in an interleaved manner) in large language models [react_2022.pdf, p.2]."
+  },
+  {
+    "question": "Which external information source does ReAct interact with to answer questions and verify facts?",
+    "type": "answer",
+    "retrieval_hit": true,
+    "ok": true,
+    "answer": "ReAct interacts with a Wikipedia API (or Wikipedia web API) to retrieve information for question answering and fact verification [react_2022.pdf, p.3, p.4]."
+  },
+  {
+    "question": "Who won the cricket world cup?",
+    "type": "refuse",
+    "ok": true,
+    "answer": "I couldn't find this in the documents."
+  },
+  {
+    "question": "What is a good recipe for biryani?",
+    "type": "refuse",
+    "ok": true,
+    "answer": "I couldn't find this in the documents."
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "type": "refuse",
+    "ok": true,
+    "answer": "I couldn't find this in the documents."
+  },
+  {
+    "question": "Who invented the telephone?",
+    "type": "refuse",
+    "ok": true,
+    "answer": "I couldn't find this in the documents."
+  }
+]
